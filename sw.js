@@ -1,7 +1,7 @@
 /* Offline-cache: de app werkt na de eerste keer openen ook zonder internet. */
-const CACHE = 'uren-v1.0.1';
+const CACHE = 'uren-v1.0.2';
 const FILES = ['./', 'index.html', 'styles.css', 'logic.js', 'xlsx.js', 'app.js', 'manifest.webmanifest',
-  'icons/icon-180.png', 'icons/icon-192.png', 'icons/icon-512.png'];
+  'icon-180.png', 'icon-192.png', 'icon-512.png'];
 
 self.addEventListener('install', (e) => {
   e.waitUntil(caches.open(CACHE).then((c) => c.addAll(FILES)).then(() => self.skipWaiting()));
